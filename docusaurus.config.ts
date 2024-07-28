@@ -19,6 +19,7 @@ const config: Config = {
     description:
       '',
   },
+
   themeConfig: {
     // announcementBar: {
     //   id: 'announcementBar-3',
@@ -173,6 +174,8 @@ const config: Config = {
         dark: 'rgb(50, 50, 50)',
       },
     },
+    onBrokenLinks: 'warn',
+    onBrokenMarkdownLinks: 'warn',
   } satisfies Preset.ThemeConfig,
   presets: [
     [
@@ -249,6 +252,7 @@ const config: Config = {
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css',
     'https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Semibold.min.css',
   ],
+  
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],
