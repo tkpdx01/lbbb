@@ -1,7 +1,7 @@
 ---
 slug: /tencent-mysql-xb-restore
 title: 腾讯云MySQL数据库xb冷备份恢复
-image: https://lbbb.pages.dev/assets/image/xb数据库恢复/1722152771950.png
+image: https://raw.githubusercontent.com/tkpdx01/photo/main/202407281625664.png
 ---
 腾讯云 MySQL 数据库冷备份格式为 xb ，使用 XtraBackup 创建，恢复时也需要使用 XtraBackup ，目前还不支持 Windows 系统。本文介绍恢复过程及迁移到 Windows MySQL 中的过程。
 
@@ -19,7 +19,7 @@ image: https://lbbb.pages.dev/assets/image/xb数据库恢复/1722152771950.png
 
 ### 1.安装Percona XtraBackup
 
-安装之前需要根据 MySQL 版本选择对应的 XtraBackup 版本，MySQL 8.0 使用 XtraBackup 8，否则应该使用 XtraBackup 2.4。在 https://www.percona.com/downloads 可以选择对应的版本。
+安装之前需要根据 MySQL 版本选择对应的 XtraBackup 版本，MySQL 8.0 使用 XtraBackup 8.0，否则应该使用 XtraBackup 2.4。在 https://www.percona.com/downloads 可以选择对应的版本。
 
 ![1722154548733](image/xb数据库恢复/1722154548733.png)
 
