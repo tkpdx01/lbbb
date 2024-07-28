@@ -8,7 +8,7 @@ const beian = '1'
 const beian1 = '1'
 
 const config: Config = {
-  title: '老白不白的笔记本',
+  title: '老白不白的笔记',
   url: 'https://lbbb.pages.dev',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
