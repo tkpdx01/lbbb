@@ -24,3 +24,4 @@ yarn-error.log*
 pnpm-error.log*
 
 .vercel
+blog/xb.txt
