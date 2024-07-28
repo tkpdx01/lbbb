@@ -2,7 +2,7 @@
 slug: restore-xb-mysql-tencent
 title: 腾讯云MySQL数据库xb冷备份恢复
 date: 2024-07-28
-authors: 老白不白
+authors: lbbb
 tags: [xb,mysql]
 keywords: [xb,mysql,5.7]
 ---
