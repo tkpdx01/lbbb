@@ -1,3 +1,6 @@
-测试
+---
+slug: /tencent-mysql-xb-restore
+---
+
 
 ![1722135212984](image/xb数据库恢复/1722135212984.png)
