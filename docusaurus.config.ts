@@ -4,8 +4,8 @@ import { themes } from 'prism-react-renderer'
 import { GiscusConfig } from './src/components/Comment'
 import social from './data/social'
 
-const beian = ''
-const beian1 = ''
+const beian = '1'
+const beian1 = '1'
 
 const config: Config = {
   title: '老白不白的笔记本',
@@ -35,7 +35,7 @@ const config: Config = {
       },
       {
         name: 'keywords',
-        content: '',
+        content: '老白不白',
       },
     ],
     docs: {
@@ -88,7 +88,7 @@ const config: Config = {
             { label: '归档', to: 'blog/archive' },
             { label: '技术笔记', to: 'docs/skill' },
             { label: '实战项目', to: 'project' },
-            { label: '前端示例', to: 'https://lbbb.pages.dev' },
+            
           ],
         },
         {
