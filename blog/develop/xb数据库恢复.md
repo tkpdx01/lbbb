@@ -1,14 +1,8 @@
-```
-
-```
-
 ---
-
 slug: /tencent-mysql-xb-restore
 title: 腾讯云MySQL数据库xb冷备份恢复
 image: https://raw.githubusercontent.com/tkpdx01/photo/main/202407281625664.png
--------------------------------------------------------------------------------
-
+---
 腾讯云 MySQL 数据库冷备份格式为 xb ，使用 XtraBackup 创建，恢复时也需要使用 XtraBackup ，目前还不支持 Windows 系统。本文介绍恢复过程及迁移到 Windows MySQL 中的过程。
 
 <!-- truncate -->
@@ -44,22 +38,22 @@ image: https://raw.githubusercontent.com/tkpdx01/photo/main/202407281625664.png
 3. 通过移动存储设备拷贝（尽量使用高速移动存储设备）
 
 使用 xbstream 解包 .xb 文件
-``xbstream -x --decrypt=AES256 --encrypt-key-file=<备份密钥文件> --parallel=2  -C /data/mysql < /data/test.xb``
+```xbstream -x --decrypt=AES256 --encrypt-key-file=<备份密钥文件> --parallel=2  -C /data/mysql < /data/test.xb```
 解包之后的文件使用 xtrabackup 解压
-`xtrabackup --decompress --target-dir=/data/mysql`
+```xtrabackup --decompress --target-dir=/data/mysql```
 
 ### 3.处理解压后的 .qb 文件
 
 解包、解压完毕之后的文件还需要使用 xtrabackup 处理一下才能够被 MySQL 识别
-`xtrabackup --prepare  --target-dir=/data/mysql`
+```xtrabackup --prepare  --target-dir=/data/mysql```
 
 > 上述过程会较为漫长，耐心等待
 
 ### 4.打包 MySQL data 目录并复制到 Windows
-`tar -czf data_mysql.tar.gz -C /data mysql`
+```tar -czf data_mysql.tar.gz -C /data mysql```
 兼顾压缩率与打包速度的命令
 ### 5.在 Windows 上使用 data 目录恢复数据库
 将第4步中打包的 data_mysql.tar.gz 拷贝至 Windows 电脑中，解压备用。
 确保 Windows 环境中安装有对应版本的 MySQL，在进行恢复之前，停止 mysqld 服务，找到配置文件 my.ini ，修改其中的 datadir
-'datadir=D:/data/'
+```datadir=D:/data/```
 重新开启 MySQL 服务即可完成数据库的恢复。
