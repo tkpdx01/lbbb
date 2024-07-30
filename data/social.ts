@@ -18,7 +18,7 @@ type SocialValue = {
 }
 
 const social: Social = {
-  // github: 'https://github.com/kuizuo',
+     github: 'https://github.com/',
   // twitter: 'https://twitter.com/kuizuo',
   // juejin: 'https://juejin.cn/user/1565318510545901',
   // qq: 'https://img.kuizuo.cn/qq.png',
@@ -84,7 +84,7 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
     icon: 'ri:netease-cloud-music-line',
     color: '#C20C0C',
   },
-  rss: {
+  rss : {
     href: '/blog/rss.xml',
     title: 'RSS',
     icon: 'ri:rss-line',
