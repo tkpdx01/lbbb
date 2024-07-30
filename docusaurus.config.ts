@@ -96,10 +96,7 @@ const config: Config = {
           title: '社交媒体',
           items: [
             { label: '关于我', to: '/about' },
-            { label: 'GitHub', href: social.github.href },
-            { label: 'Twitter', href: social.twitter.href },
-            { label: '掘金', href: social.juejin.href },
-            { label: 'Discord', href: social.discord.href },
+ 
           ],
         },
         {
@@ -119,7 +116,7 @@ const config: Config = {
       ],
       copyright: `
   
-        <p>Copyright © 2020 - PRESENT 老白不白 Built with Docusaurus.</p>
+        <p>Copyright © 2024 老白不白 Built with Docusaurus.</p>
         `,
     },
     algolia: {
